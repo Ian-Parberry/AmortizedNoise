@@ -1,0 +1,70 @@
+Amortized Noise
+
+	This GitHub repository contains supplementary material to accompany
+	Ian Parberry, "Amortized Noise", Journal of Computer Graphics Techniques,
+	Vol. ?, No. ?, pp. ?, To Appear.
+
+	See also http://larc.unt.edu/ian/research/amortizednoise/.
+
+Abstract
+
+	Perlin noise is often used to compute a regularly spaced grid of noise values. 
+	The amortized noise algorithm takes advantage of this regular call pattern to amortize
+	the computation cost of floating point computations over interpolated points
+	using dynamic programming techniques. The 2D amortized noise algorithm uses a factor of
+	17/3 ~ 5.67 fewer floating point multiplications than the 2D Perlin noise algorithm, resulting
+	in a speedup by a factor of approximately 3.6-4.8 in practice on available desktop and laptop
+	computing hardware. The 3D amortized noise algorithm uses a factor of 40/7 ~ 5.71 fewer floating
+	point multiplications than the 3D Perlin noise algorithm, but the increasing overhead for the
+	initialization of tables limits the speedup factor achieved in practice to around 2.25.
+	Improvements to both 2D Perlin noise and 2D amortized noise include making them infinite
+	and non-repeating by replacing the permutation table with a perfect hash function,
+	and making them smoother by using quintic splines instead of cubic splines. While these
+	improvements slow down 2D Perlin noise down by a factor of approximately 32-92, they slow
+	2D amortized noise by a negligible amount.
+
+License
+
+	The source code in this repository is made available under the following license.
+
+	// Copyright Ian Parberry, (date).
+	//
+	// This file is made available under the GNU All-Permissive License.
+	//
+	// Copying and distribution of this file, with or without modification,
+	// are permitted in any medium without royalty provided the copyright
+	// notice and this notice are preserved.  This file is offered as-is,
+	// without any warranty.
+
+Contents
+	
+	This repository contains the following folders.
+
+2D Evaluator
+
+	Contents: A Visual Studio 2012 project and a Unix makefile for the evaluator used
+	in the paper to measure the running time of amortized noise compared to Perlin noise.
+
+2D Generator
+
+	Contents: A Visual Studio 2012 project and a Unix makefile for a generator
+	that will save a grayscale image of 2D finite or infinite amortized noise.
+
+3D Generator
+
+	Contents: A Visual Studio 2012 project and a Unix++ makefile for a generator
+	that will save grayscale images of 3D finite or infinite amortized noise.
+
+Data
+
+	Contents: Files Data2D.xlsx and Data3D.xlsx containing the test data used in the paper in
+	Microsoft(R) Excel(TM) format.
+
+Examples
+
+	Contents:
+
+		i0s512o36s9999r23c14.png  512x512 grayscale image of 2D finite amortized noise
+		i1s512o36s9999r23c42.png  512x512 grayscale image of 2D infinite amortized noise
+		finite.gif                256x256 animated gif of 3D finite amortized noise
+		infinite.gif              256x256 animated gif of 3D infinite amortized noise
