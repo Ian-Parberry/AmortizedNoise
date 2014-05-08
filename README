@@ -40,7 +40,11 @@ LICENSE
 
 CONTENTS
   
-  This repository contains the following folders.
+  2D Evaluator
+  2D Generator
+  3D Generator
+  Data
+  Examples
 
 2D Evaluator
 
@@ -64,8 +68,6 @@ Data
   paper in Microsoft(R) Excel(TM) format.
 
 Examples
-
-  Contents:
 
     i0s512o36s9999r23c14.png  512x512 grayscale image of 2D finite amortized noise
     i1s512o36s9999r23c42.png  512x512 grayscale image of 2D infinite amortized noise
