@@ -33,10 +33,9 @@
 // without any warranty.
 //
 // Created by Ian Parberry, September 2013.
-// Last updated May 7, 2014.
+// Last updated May 9, 2014.
 
 #include "defines.h" //OS porting defines
-#include "SaveImage.h" //image saving functions
 
 #include <stdlib.h> //for rand()
 #include <stdio.h> //for printf()
@@ -45,10 +44,38 @@
 #include "FiniteAmortizedNoise2D.h"
 #include "CPUtime.h"
 
+#define STB_IMAGE_WRITE_IMPLEMENTATION ///< For platform-neutral image file output.
+#include "stb_image_write.h"
+
 CFiniteAmortizedNoise2D* g_pFiniteAmortizedNoise = NULL; ///< Pointer to the finite amortized 2D noise generator. 
 CInfiniteAmortizedNoise2D* g_pInfiniteAmortizedNoise = NULL; ///< Pointer to the infinite amortized 2D noise generator. 
 
 bool g_bInfinite = true; ///< Whether to use infinite noise: true for infinite noise, false for finite noise.
+
+/// Save a cell of 2D noise as a png file.
+/// \param cell Pointer to array in which to store the noise.
+/// \param scale Rescale by this to get in the range -1..1.
+/// \param basefilename Root of the file name under which to store the noise.
+/// \param n Cell size.
+
+void Save2DNoise(float** cell, const int n, const float scale, const char* basefilename){ 
+  char filename[MAX_PATH];
+  sprintf(filename, "%s.png", basefilename); 
+  printf("Saving to %dx%d png file %s\n\n", n, n, filename);
+
+  unsigned char* pixelbuffer = new unsigned char[4*n*n]; 
+
+  //convert from noise cell to pixel buffer
+  for(int i=0; i<n; ++i)
+    for(int j=0; j<n; ++j){
+      unsigned int b = (unsigned int)(128.0f*(cell[i][j]*scale + 1.0f));
+      ((unsigned int*)pixelbuffer)[i*n + j] = 0xFF000000U | b<<16 | b<<8 | b;       
+    } //for 
+
+  stbi_write_png(filename, n, n, 4, pixelbuffer, 4*n); //save byte buffer as a png file
+
+  delete [] pixelbuffer;
+} //Save2DNoise
 
 /// Generate a random cell of 2D noise.
 /// \param cell Pointer to array in which to store the noise.
@@ -119,19 +146,19 @@ int main(int argc, char *argv[]){
   printf("Amortized 2D Noise Generator, Ian Parberry, 2014\n");
   printf("--------------------------------------------------------------\n\n");
 
-  int response = -1;
-  while(response != 0 && response != 1){
+  int response = 1;
+  do{
     printf("Enter 0 for finite noise and 1 for infinite noise:\n> ");
     scanf("%d", &response);
-  } //while
+  }while(response != 0 && response != 1);
   g_bInfinite = response == 1;
 
-  int n = 0;
+  int n = 2048;
   printf("Texture size (must be a power of 2 and at least 2):\n> ");
   scanf("%d", &n);
 
   if((n >= 2) && !(n & (n - 1))){ //n is a power of 2 and at least 2
-    unsigned int seed;
+    unsigned int seed = 0;
     printf("Hash seed:\n> "); scanf("%d", &seed);
     srand(seed); //for finite noise
 
@@ -139,22 +166,20 @@ int main(int argc, char *argv[]){
     for(int temp=n; temp>1; temp=temp>>1) //compute log base 2 of n
       log2n++;
 
-    int m0, m1; //largest and smallest octaves
+    int m0 = 4, m1 = 7; //largest and smallest octaves
     printf("Largest octave (must be at least 1 and at most %d):\n> ", log2n);
-     scanf("%d", &m0);
+    scanf("%d", &m0);
 
     if(m0 >= 1 && m0 <= log2n){ //largest octave is correct
       printf("Smallest octave (must be at least %d and at most %d):\n> ", m0, log2n);
-       scanf("%d", &m1);
+      scanf("%d", &m1);
 
       if(m1 >= m0){ //both octaves are correct       
         //get tile coordinates
-        int nCol, nRow;
+        int nCol = 0, nRow = 0;
         printf("Tile coordinates:\n");  
-        printf("  Row: ");
-         scanf("%d", &nRow); 
-        printf("  Col: ");
-         scanf("%d", &nCol);
+        printf("  Row: "); scanf("%d", &nRow); 
+        printf("  Col: "); scanf("%d", &nCol);
 
         //generate the noise texture and save it
         GenerateAndSave2DNoise(nRow, nCol, m0, m1, n, seed);

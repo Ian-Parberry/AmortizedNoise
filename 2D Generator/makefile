@@ -1,4 +1,4 @@
-SRC = FiniteAmortizedNoise2D.cpp InfiniteAmortizedNoise2D.cpp CPUtime.cpp main.cpp MurmurHash3.cpp SaveImage.cpp
+SRC = FiniteAmortizedNoise2D.cpp InfiniteAmortizedNoise2D.cpp CPUtime.cpp main.cpp MurmurHash3.cpp
 EXE = generator
 
 all: $(SRC) $(EXE)

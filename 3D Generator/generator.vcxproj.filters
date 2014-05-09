@@ -29,10 +29,10 @@
     <ClInclude Include="CPUtime.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SaveImage.h">
+    <ClInclude Include="resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="resource.h">
+    <ClInclude Include="stb_image_write.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -50,9 +50,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CPUtime.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SaveImage.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

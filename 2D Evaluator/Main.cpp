@@ -49,7 +49,7 @@
 // without any warranty.
 //
 // Created by Ian Parberry, December 2013.
-// Last updated May 7, 2014.
+// Last updated May 9, 2014.
 
 #include "defines.h" //OS porting defines 
 
@@ -145,35 +145,35 @@ void TestPerlinNoiseVariants(){
   if(datafile)
     fprintf(datafile, "n\tPerlin\tInf.\tRatio1\tInf. Sm.\tRatio2\tRepeats\n");
 
-  int nRepeats=-1, nSmallSize=-1, nLargeSize=-1, nSizeDelta=-1;
+  int nRepeats=1000, nSmallSize=128, nLargeSize=1024, nSizeDelta=128;
   
-  while(nRepeats <= 0){
+  do{
     printf("Number of repeats:\n> ");
     scanf("%d", &nRepeats); 
     if(nRepeats <= 0)
       printf("Please enter a number greater than zero.");
-  } //while
+  }while(nRepeats <= 0);
   
-  while(nSmallSize <= 0){
+ do{
     printf("Smallest size:\n> ");
     scanf("%d", &nSmallSize);
     if(nSmallSize <= 0)
       printf("Please enter a number greater than zero.");
-  } //while
+  }while(nSmallSize <= 0);
   
-  while(nLargeSize < nSmallSize){
+  do{
     printf("Largest size:\n> ");
     scanf("%d", &nLargeSize);
     if(nLargeSize < nSmallSize)
       printf("Please enter a number that is at least %d.", nSmallSize);
-  } //while
+  }while(nLargeSize < nSmallSize);
   
-  while(nSizeDelta <= 0){
+  do{
     printf("Size delta:\n> ");
     scanf("%d", &nSizeDelta);   
     if(nSizeDelta <= 0)
       printf("Please enter a number greater than zero.");
-  } //while
+  }while(nSizeDelta <= 0);
   
   printf("n\tFinite\tInfinite\tSmooth\tRatio1\tRatio2\tRepeats\n");
 
@@ -235,35 +235,35 @@ void TestAmortizedNoiseVariants(){
 
   if(datafile)fprintf(datafile, "n\tPerlin\tAmortized\tRatio\tInfinite Amortized\tRatio\tRepeats\n");
 
-  int nRepeats=-1, nSmallSize=-1, nLargeSize=-1, nSizeDelta=-1;
+  int nRepeats=1000, nSmallSize=128, nLargeSize=1024, nSizeDelta=128;
   
-  while(nRepeats <= 0){
+  do{
     printf("Number of repeats:\n> ");
     scanf("%d", &nRepeats); 
     if(nRepeats <= 0)
       printf("Please enter a number greater than zero.");
-  } //while
+  }while(nRepeats <= 0);
   
-  while(nSmallSize <= 0){
+ do{
     printf("Smallest size:\n> ");
     scanf("%d", &nSmallSize);
     if(nSmallSize <= 0)
       printf("Please enter a number greater than zero.");
-  } //while
+  }while(nSmallSize <= 0);
   
-  while(nLargeSize < nSmallSize){
+  do{
     printf("Largest size:\n> ");
     scanf("%d", &nLargeSize);
     if(nLargeSize < nSmallSize)
       printf("Please enter a number that is at least %d.", nSmallSize);
-  } //while
+  }while(nLargeSize < nSmallSize);
   
-  while(nSizeDelta <= 0){
+  do{
     printf("Size delta:\n> ");
     scanf("%d", &nSizeDelta);   
     if(nSizeDelta <= 0)
       printf("Please enter a number greater than zero.");
-  } //while
+  }while(nSizeDelta <= 0);
   
   printf("n\tPerlin\tAmort.\tRatio\tInf.\tRatio\tRepeats\n");
 

@@ -71,7 +71,6 @@
     <ClCompile Include="InfiniteAmortizedNoise2D.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MurmurHash3.cpp" />
-    <ClCompile Include="SaveImage.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Common.h" />
@@ -81,7 +80,7 @@
     <ClInclude Include="InfiniteAmortizedNoise2D.h" />
     <ClInclude Include="MurmurHash3.h" />
     <ClInclude Include="resource.h" />
-    <ClInclude Include="SaveImage.h" />
+    <ClInclude Include="stb_image_write.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="generator.rc" />
