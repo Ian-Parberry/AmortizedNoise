@@ -48,19 +48,29 @@ CONTENTS
 
 2D Evaluator
 
-  Contents: A Visual Studio 2012 project and a Unix makefile for the evaluator
-  used in the paper to measure the running time of amortized noise compared to
-  Perlin noise.
+  Contents: A Microsoft(R) Visual Studio 2012(TM) project and a Unix makefile for
+  the evaluator used in the paper to measure the running time of amortized noise
+  compared to Perlin noise.
+
+  Doxygen generated documentation can be found at
+  http://larc.unt.edu/ian/research/amortizednoise/Doxygen/Evaluate2D/.
 
 2D Generator
 
-  Contents: A Visual Studio 2012 project and a Unix makefile for a generator
-  that will save a grayscale image of 2D finite or infinite amortized noise.
+  Contents: A Microsoft(R) Visual Studio 2012(TM) project and a Unix makefile for
+  a generator that will save a grayscale image of 2D finite or infinite amortized
+  noise.
+
+  Doxygen generated documentation can be found at
+  http://larc.unt.edu/ian/research/amortizednoise/Doxygen/Generate2D.
 
 3D Generator
 
-  Contents: A Visual Studio 2012 project and a Unix++ makefile for a generator
+  Contents: A Visual Studio 2012(TM) project and a Unix++ makefile for a generator
   that will save grayscale images of 3D finite or infinite amortized noise.
+
+  Doxygen generated documentation can be found at
+  http://larc.unt.edu/ian/research/amortizednoise/Doxygen/Generate3D/.
 
 Data
 
