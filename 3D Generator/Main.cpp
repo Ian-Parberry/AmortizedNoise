@@ -7,9 +7,9 @@
 /// an infinite greyscale tiled 3D texture. It will prompt the user via stdin/stdout
 /// for the texture size (which must be a power of 2), a seed value, the largest and smallest octaves,
 /// and tile coordinates in row-column-sheet format. The input values are checked for errors. 
-/// If they pass, the tile texture will be saved in a png file (windows) or tga file (other OS).
-/// The amount of user CPU time used in generating the noise is reported to stdout.
-/// Saved files will be named  i[F]s[N]o[LS]s[D]r[R]c[C]-NNN.X (for example, i1s256o25s5432r54c33.png), where:
+/// If they pass, the tile texture will be saved in a png file. The amount of user CPU time
+/// used in generating the noise is reported to stdout. Saved files will be named
+/// i[F]s[N]o[LS]s[D]r[R]c[C]-NNN.png (for example, i1s256o25s5432r54c33.png), where:
 /// <center><table>
 /// <tr><td>F<td>0 for finite or 1 for infinite
 /// <tr><td>N<td>tile side
@@ -19,7 +19,6 @@
 /// <tr><td>R<td>row
 /// <tr><td>C<td>column
 /// <tr><td>H<td>sheet
-/// <tr><td>X<td>png or tga
 /// </table></center>
 ///
 /// For more details on amortized noise, see Ian Parberry, "Amortized Noise",
@@ -35,9 +34,9 @@
 // without any warranty.
 //
 // Created by Ian Parberry, September 2013.
-// Last updated May 9, 2014.
+// Last updated May 12, 2014.
 
-#include <stdlib.h> //for rand()
+#include <stdlib.h> //for srand()
 #include <stdio.h> //for printf()
 
 #include "defines.h"  //OS porting defines
@@ -109,14 +108,9 @@ float Generate3DNoise(float*** cell, const int x, const int y, const int z, cons
 /// \param filename Root of the file name under which to store the noise.
 
 void Save3DNoise(float*** cell, const int n, const int frames, float scale, char* filename){ 
-#if defined(_MSC_VER) //Windows Visual Studio only 
   printf("Saving %d frames to %dx%d png files %s-NNN.png\n\n", frames, n, n, filename);
-#else
-  printf("Saving %d frames to %dx%d tga files %s-NNN.tga\n\n", frames, n, n, filename);
-#endif
 
   int delta = n/frames;
-
   char buffer[MAX_PATH];
   for(int i=0; i<n; i+=delta){
     sprintf(buffer, "%s-%c%c%c", filename, '0' + (i%1000)/100, '0' + (i%100)/10, '0' + i%10);
@@ -188,13 +182,14 @@ int main(int argc, char *argv[]){
   }while(response != 0 && response != 1);
   g_bInfinite = response == 1;
 
-  int n = 2048;
+  int n = 256;
   printf("Texture size (must be a power of 2 and at least 2):\n> ");
   scanf("%d", &n);
 
   if((n >= 2) && !(n & (n - 1))){ //n is a power of 2 and at least 2
-    unsigned int seed = 0;
+    unsigned int seed = 1;
     printf("Hash seed:\n> "); scanf("%d", &seed);
+    srand(seed); //for finite noise
 
     int log2n = 0; //log base 2 of n
     for(int temp=n; temp>1; temp=temp>>1) //compute log base 2 of n
@@ -217,13 +212,13 @@ int main(int argc, char *argv[]){
         printf("  Sheet: "); scanf("%d", &nSheet);
 
          int frames = 1;
-         printf("Number of frames to save (must be a power of 2):\n> ");
+         printf("Number of frames to save (must be between 1 and %d):\n> ", n);
          scanf("%d", &frames);
 
-         if((frames >= 2) && !(frames & (frames - 1))) //n is a power of 2 and at least 2     
+         if(frames >= 1 && frames <= n) //n is a power of 2 and at least 2     
            GenerateAndSave3DNoise(nRow, nCol, nSheet, m0, m1, n, seed, frames); //generate the noise texture and save it
          else      
-           printf("That's not a power of 2. Bailing out.\n");
+           printf("That's not between 1 and %d. Bailing out.\n", n);
       } //if
       else printf("That's not between %d and %d. Bailing out.\n", m0, log2n);
     } //if

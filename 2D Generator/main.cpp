@@ -33,7 +33,7 @@
 // without any warranty.
 //
 // Created by Ian Parberry, September 2013.
-// Last updated May 9, 2014.
+// Last updated May 12, 2014.
 
 #include "defines.h" //OS porting defines
 
@@ -158,7 +158,7 @@ int main(int argc, char *argv[]){
   scanf("%d", &n);
 
   if((n >= 2) && !(n & (n - 1))){ //n is a power of 2 and at least 2
-    unsigned int seed = 0;
+    unsigned int seed = 1;
     printf("Hash seed:\n> "); scanf("%d", &seed);
     srand(seed); //for finite noise
 

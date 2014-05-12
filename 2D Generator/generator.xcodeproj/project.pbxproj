@@ -1,0 +1,330 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		79EC307C1918E8EA007EEC21 /* FiniteAmortizedNoise2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 79EC30751918E8EA007EEC21 /* FiniteAmortizedNoise2D.cpp */; };
+		79EC307D1918E8EA007EEC21 /* FiniteAmortizedNoise2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 79EC30751918E8EA007EEC21 /* FiniteAmortizedNoise2D.cpp */; };
+		79EC307E1918E8EA007EEC21 /* InfiniteAmortizedNoise2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 79EC30771918E8EA007EEC21 /* InfiniteAmortizedNoise2D.cpp */; };
+		79EC307F1918E8EA007EEC21 /* InfiniteAmortizedNoise2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 79EC30771918E8EA007EEC21 /* InfiniteAmortizedNoise2D.cpp */; };
+		79EC30801918E8EA007EEC21 /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 79EC30791918E8EA007EEC21 /* Main.cpp */; };
+		79EC30811918E8EA007EEC21 /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 79EC30791918E8EA007EEC21 /* Main.cpp */; };
+		79EC30821918E8EA007EEC21 /* MurmurHash3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 79EC307A1918E8EA007EEC21 /* MurmurHash3.cpp */; };
+		79EC30831918E8EA007EEC21 /* MurmurHash3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 79EC307A1918E8EA007EEC21 /* MurmurHash3.cpp */; };
+		79FDF32918C503520006B6A1 /* CPUtime.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 79FDF2E818C4FB7B0006B6A1 /* CPUtime.cpp */; };
+		79FDF37818CB2CE60006B6A1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D2E5D4183944C4008BF89F /* CoreGraphics.framework */; };
+		79FDF37918CB2CE60006B6A1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D2E5D6183944C4008BF89F /* UIKit.framework */; };
+		79FDF37A18CB2CE60006B6A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D2E5D2183944C4008BF89F /* Foundation.framework */; };
+		79FDF39118CB2EFF0006B6A1 /* CPUtime.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 79FDF2E818C4FB7B0006B6A1 /* CPUtime.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		79FDF31818C4FE380006B6A1 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		79D2E5D2183944C4008BF89F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		79D2E5D4183944C4008BF89F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		79D2E5D6183944C4008BF89F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		79D2E5EB183944C5008BF89F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		79D2E60218394AB1008BF89F /* iOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = iOS.plist; sourceTree = "<group>"; };
+		79EC30741918E8EA007EEC21 /* defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = defines.h; sourceTree = "<group>"; };
+		79EC30751918E8EA007EEC21 /* FiniteAmortizedNoise2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FiniteAmortizedNoise2D.cpp; sourceTree = "<group>"; };
+		79EC30761918E8EA007EEC21 /* FiniteAmortizedNoise2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiniteAmortizedNoise2D.h; sourceTree = "<group>"; };
+		79EC30771918E8EA007EEC21 /* InfiniteAmortizedNoise2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = InfiniteAmortizedNoise2D.cpp; sourceTree = "<group>"; };
+		79EC30781918E8EA007EEC21 /* InfiniteAmortizedNoise2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfiniteAmortizedNoise2D.h; sourceTree = "<group>"; };
+		79EC30791918E8EA007EEC21 /* Main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Main.cpp; sourceTree = "<group>"; };
+		79EC307A1918E8EA007EEC21 /* MurmurHash3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MurmurHash3.cpp; sourceTree = "<group>"; };
+		79EC307B1918E8EA007EEC21 /* MurmurHash3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MurmurHash3.h; sourceTree = "<group>"; };
+		79FDF2E718C4FB7B0006B6A1 /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		79FDF2E818C4FB7B0006B6A1 /* CPUtime.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CPUtime.cpp; sourceTree = "<group>"; };
+		79FDF2E918C4FB7B0006B6A1 /* CPUtime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPUtime.h; sourceTree = "<group>"; };
+		79FDF31C18C4FE380006B6A1 /* generator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = generator; sourceTree = BUILT_PRODUCTS_DIR; };
+		79FDF37F18CB2CE60006B6A1 /* generator_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = generator_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		79FDF31718C4FE380006B6A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79FDF37718CB2CE60006B6A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79FDF37818CB2CE60006B6A1 /* CoreGraphics.framework in Frameworks */,
+				79FDF37918CB2CE60006B6A1 /* UIKit.framework in Frameworks */,
+				79FDF37A18CB2CE60006B6A1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7964146F18367F3C009CE4C6 = {
+			isa = PBXGroup;
+			children = (
+				79EC30741918E8EA007EEC21 /* defines.h */,
+				79FDF2E718C4FB7B0006B6A1 /* Common.h */,
+				79FDF2E818C4FB7B0006B6A1 /* CPUtime.cpp */,
+				79FDF2E918C4FB7B0006B6A1 /* CPUtime.h */,
+				79EC307A1918E8EA007EEC21 /* MurmurHash3.cpp */,
+				79EC307B1918E8EA007EEC21 /* MurmurHash3.h */,
+				79EC30751918E8EA007EEC21 /* FiniteAmortizedNoise2D.cpp */,
+				79EC30761918E8EA007EEC21 /* FiniteAmortizedNoise2D.h */,
+				79EC30771918E8EA007EEC21 /* InfiniteAmortizedNoise2D.cpp */,
+				79EC30781918E8EA007EEC21 /* InfiniteAmortizedNoise2D.h */,
+				79EC30791918E8EA007EEC21 /* Main.cpp */,
+				79D2E60218394AB1008BF89F /* iOS.plist */,
+				79D2E5D1183944C4008BF89F /* Frameworks */,
+				7964147918367F3C009CE4C6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7964147918367F3C009CE4C6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				79FDF31C18C4FE380006B6A1 /* generator */,
+				79FDF37F18CB2CE60006B6A1 /* generator_iOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		79D2E5D1183944C4008BF89F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				79D2E5D2183944C4008BF89F /* Foundation.framework */,
+				79D2E5D4183944C4008BF89F /* CoreGraphics.framework */,
+				79D2E5D6183944C4008BF89F /* UIKit.framework */,
+				79D2E5EB183944C5008BF89F /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		79FDF31218C4FE380006B6A1 /* generator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79FDF31918C4FE380006B6A1 /* Build configuration list for PBXNativeTarget "generator" */;
+			buildPhases = (
+				79FDF31318C4FE380006B6A1 /* Sources */,
+				79FDF31718C4FE380006B6A1 /* Frameworks */,
+				79FDF31818C4FE380006B6A1 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = generator;
+			productName = test;
+			productReference = 79FDF31C18C4FE380006B6A1 /* generator */;
+			productType = "com.apple.product-type.tool";
+		};
+		79FDF37218CB2CE60006B6A1 /* generator_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79FDF37C18CB2CE60006B6A1 /* Build configuration list for PBXNativeTarget "generator_iOS" */;
+			buildPhases = (
+				79FDF37318CB2CE60006B6A1 /* Sources */,
+				79FDF37718CB2CE60006B6A1 /* Frameworks */,
+				79FDF37B18CB2CE60006B6A1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = generator_iOS;
+			productName = testARM;
+			productReference = 79FDF37F18CB2CE60006B6A1 /* generator_iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7964147018367F3C009CE4C6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Andrew Willmott";
+			};
+			buildConfigurationList = 7964147318367F3C009CE4C6 /* Build configuration list for PBXProject "generator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7964146F18367F3C009CE4C6;
+			productRefGroup = 7964147918367F3C009CE4C6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				79FDF31218C4FE380006B6A1 /* generator */,
+				79FDF37218CB2CE60006B6A1 /* generator_iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		79FDF37B18CB2CE60006B6A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		79FDF31318C4FE380006B6A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79FDF32918C503520006B6A1 /* CPUtime.cpp in Sources */,
+				79EC30821918E8EA007EEC21 /* MurmurHash3.cpp in Sources */,
+				79EC30801918E8EA007EEC21 /* Main.cpp in Sources */,
+				79EC307C1918E8EA007EEC21 /* FiniteAmortizedNoise2D.cpp in Sources */,
+				79EC307E1918E8EA007EEC21 /* InfiniteAmortizedNoise2D.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79FDF37318CB2CE60006B6A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79FDF39118CB2EFF0006B6A1 /* CPUtime.cpp in Sources */,
+				79EC30831918E8EA007EEC21 /* MurmurHash3.cpp in Sources */,
+				79EC30811918E8EA007EEC21 /* Main.cpp in Sources */,
+				79EC307D1918E8EA007EEC21 /* FiniteAmortizedNoise2D.cpp in Sources */,
+				79EC307F1918E8EA007EEC21 /* InfiniteAmortizedNoise2D.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		7964147F18367F3C009CE4C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7964148018367F3C009CE4C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_FAST_MATH = YES;
+				GCC_OPTIMIZATION_LEVEL = fast;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		79FDF31A18C4FE380006B6A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		79FDF31B18C4FE380006B6A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		79FDF37D18CB2CE60006B6A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = iOS.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-mfpu=neon",
+					"-mno-thumb",
+					"$(OTHER_CFLAGS)",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		79FDF37E18CB2CE60006B6A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = iOS.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-mfpu=neon",
+					"-mno-thumb",
+					"$(OTHER_CFLAGS)",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7964147318367F3C009CE4C6 /* Build configuration list for PBXProject "generator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7964147F18367F3C009CE4C6 /* Debug */,
+				7964148018367F3C009CE4C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79FDF31918C4FE380006B6A1 /* Build configuration list for PBXNativeTarget "generator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79FDF31A18C4FE380006B6A1 /* Debug */,
+				79FDF31B18C4FE380006B6A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79FDF37C18CB2CE60006B6A1 /* Build configuration list for PBXNativeTarget "generator_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79FDF37D18CB2CE60006B6A1 /* Debug */,
+				79FDF37E18CB2CE60006B6A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7964147018367F3C009CE4C6 /* Project object */;
+}

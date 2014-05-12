@@ -49,7 +49,7 @@
 // without any warranty.
 //
 // Created by Ian Parberry, December 2013.
-// Last updated May 9, 2014.
+// Last updated May 12, 2014.
 
 #include "defines.h" //OS porting defines 
 
@@ -330,7 +330,7 @@ int main(int argc, char *argv[]){
   printf("Timing the generation of 2D noise with persistence 0.5 and lacunarity 2.\n");
   printf("--------------------------------------------------------------\n");
   
-  srand(0); //seed random number generator
+  srand(1); //seed random number generator
   TestAmortizedNoiseVariants(); 
   TestPerlinNoiseVariants();  
 
